@@ -1,10 +1,10 @@
 Debug
 
-/settings/st32103vct6.wsdt
+/settings/whistler.wsdt
 
-/st32103vct6.dep
-/settings/st32103vct6.cspy.bat
-/settings/st32103vct6.dbgdt
-/settings/st32103vct6.dni
-/settings/st32103vct6.wsdt
+/whistler.dep
+/settings/whistler.cspy.bat
+/settings/whistler.dbgdt
+/settings/whistler.dni
+/settings/whistler.wsdt
 
