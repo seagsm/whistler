@@ -76,7 +76,7 @@ extern Coordinate  display ;
 void TP_Init(void);
 Coordinate *Read_Ads7846(void);
 void TouchPanel_Calibrate(void);
-void TouchPanel_Horizontal_Calibrate(void);
+void TouchPanel_Horizontal_Calibrate(uint8_t *str,uint16_t TextColor, uint16_t Text_bkColor,uint16_t ScreenColor);
 void DrawCross(uint16_t Xpos,uint16_t Ypos);
 void TP_DrawPoint(uint16_t Xpos,uint16_t Ypos);
 FunctionalState setCalibrationMatrix( Coordinate * displayPtr,Coordinate * screenPtr,Matrix * matrixPtr);

@@ -1918,6 +1918,24 @@
         <name>$PROJ_DIR$\src\Board\board_pwm.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\src\Board\board_rtc.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\Board\board_rtc.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\Board\board_screens.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\Board\board_screens.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\Board\board_sys_tick.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\Board\board_sys_tick.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\src\Board\board_system_type.h</name>
       </file>
       <file>

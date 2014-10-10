@@ -483,15 +483,15 @@ void TouchPanel_Calibrate(void)
 }
 
 /* Horizontal callibration. */
-void TouchPanel_Horizontal_Calibrate(void)
+void TouchPanel_Horizontal_Calibrate(uint8_t *str,uint16_t TextColor, uint16_t Text_bkColor,uint16_t ScreenColor)
 {
     uint8_t i;
     Coordinate * Ptr;
 
     for(i=0;i<3;i++)
     {
-        LCD_Clear(Blue2);
-        GUI_Text_Rotated(TEXT_OF_CALLIBRATION_X_POSITION, TEXT_OF_CALLIBRATION_Y_POSITION, "Touch crosshair to calibrate", White, Blue2, 3);
+        LCD_Clear(ScreenColor);
+        GUI_Text_Rotated(TEXT_OF_CALLIBRATION_X_POSITION, TEXT_OF_CALLIBRATION_Y_POSITION, str, TextColor, Text_bkColor, 3);
         delay_ms(500);
         DrawCross(DisplaySample[i].x,DisplaySample[i].y);
         do
@@ -503,7 +503,7 @@ void TouchPanel_Horizontal_Calibrate(void)
         ScreenSample[i].x= Ptr->x; ScreenSample[i].y= Ptr->y;
     }
     setCalibrationMatrix( &DisplaySample[0],&ScreenSample[0],&matrix ) ;
-    LCD_Clear(Black);
+    LCD_Clear(ScreenColor);
 }
 
 

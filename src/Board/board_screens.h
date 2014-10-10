@@ -1,5 +1,5 @@
-#ifndef BOARD_TASKS_H
-#define BOARD_TASKS_H 1
+#ifndef BOARD_SCREENS_H
+#define BOARD_SCREENS_H 1
 
 
 #include "FreeRTOS.h"
@@ -14,9 +14,9 @@
 #include "systick.h"
 #include <stdio.h>
 
+void board_screens_draw_start_screen(void);
 
-void vTaskSystem(void *pvParameters);
-void vTaskLED2(void *pvParameters);
-void vTaskLED1(void *pvParameters);
+
+
 
 #endif

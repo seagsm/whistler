@@ -3,6 +3,7 @@
 
 
 #include "stm32f10x.h"
+
 //FreeRTOS
 #include "FreeRTOS.h"
 #include "task.h"
@@ -15,10 +16,12 @@
 #include <string.h>
 #include <math.h>
 
+
 #include "board_GUI_primitives.h"
 #include "board_GUI.h"
 #include "board_tasks.h"
-
+#include "board_screens.h"
+#include "board_sys_tick.h"
 
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf

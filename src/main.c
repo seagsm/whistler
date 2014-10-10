@@ -8,7 +8,7 @@ void USART_Configuration(void);
 uint16_t touch_Xpos =0, touch_Ypos = 0;
 
 /*******************************************************************************
-
+SCREEN:
 (X)
 239
 .
@@ -26,28 +26,20 @@ int main(void)
     /* Init system stdio. */
     USART_Configuration();
 
-    /* Init*/
-    LCD_Initializtion();
-    LCD_BackLight_Init();
-    delay_init();
-
-    TP_Init();
-
-    /* Clear display. */
-    LCD_Clear(sys_Blue);
-    TouchPanel_Horizontal_Calibrate();
-
+  gv_board_sys_tick_init();  
     /* Add tasks . */
+    xTaskCreate( vTaskSystem, ( signed char * ) "System", configMINIMAL_STACK_SIZE, NULL, 2, ( xTaskHandle * ) NULL);
     xTaskCreate( vTaskLED1, ( signed char * ) "LED1", configMINIMAL_STACK_SIZE, NULL, 2, ( xTaskHandle * ) NULL);
     xTaskCreate( vTaskLED2, ( signed char * ) "LED2", configMINIMAL_STACK_SIZE, NULL, 2, ( xTaskHandle * ) NULL);
-
-    LCD_SetPoint(0,0,0xf800);
-
-    board_GUI_Init();
+    
+    //board_GUI_Init();
 
     /* Start tasks. */
     vTaskStartScheduler();
-
+    
+    gv_board_sys_tick_init(); 
+    NVIC_PriorityGroupConfig( NVIC_PriorityGroup_4 );
+    __enable_irq();
     /* Main loop. */
     while(1)
     {
