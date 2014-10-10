@@ -25,6 +25,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
+#include "board_GUI_primitives.h"
+#include "systick.h"
+#include "GLCD.h"
 
 /* Private typedef -----------------------------------------------------------*/
 typedef	struct POINT
@@ -44,6 +47,10 @@ typedef struct Matrix
               Fn,
               Divider ;
 } Matrix ;
+
+
+#define TEXT_OF_CALLIBRATION_X_POSITION 120
+#define TEXT_OF_CALLIBRATION_Y_POSITION 45
 
 
 /* Private variables ---------------------------------------------------------*/
@@ -69,6 +76,7 @@ extern Coordinate  display ;
 void TP_Init(void);
 Coordinate *Read_Ads7846(void);
 void TouchPanel_Calibrate(void);
+void TouchPanel_Horizontal_Calibrate(void);
 void DrawCross(uint16_t Xpos,uint16_t Ypos);
 void TP_DrawPoint(uint16_t Xpos,uint16_t Ypos);
 FunctionalState setCalibrationMatrix( Coordinate * displayPtr,Coordinate * screenPtr,Matrix * matrixPtr);

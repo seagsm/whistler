@@ -22,8 +22,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "TouchPanel.h"
-#include "systick.h"
-#include "GLCD.h"
 
 /* Private variables ---------------------------------------------------------*/
 Matrix matrix ;
@@ -483,6 +481,31 @@ void TouchPanel_Calibrate(void)
   setCalibrationMatrix( &DisplaySample[0],&ScreenSample[0],&matrix ) ;  /* 送入值得到参数 */
   LCD_Clear(Black);
 }
+
+/* Horizontal callibration. */
+void TouchPanel_Horizontal_Calibrate(void)
+{
+    uint8_t i;
+    Coordinate * Ptr;
+
+    for(i=0;i<3;i++)
+    {
+        LCD_Clear(Blue2);
+        GUI_Text_Rotated(TEXT_OF_CALLIBRATION_X_POSITION, TEXT_OF_CALLIBRATION_Y_POSITION, "Touch crosshair to calibrate", White, Blue2, 3);
+        delay_ms(500);
+        DrawCross(DisplaySample[i].x,DisplaySample[i].y);
+        do
+        {
+            Ptr=Read_Ads7846();
+        }
+        while( Ptr == (void*)0 );
+          
+        ScreenSample[i].x= Ptr->x; ScreenSample[i].y= Ptr->y;
+    }
+    setCalibrationMatrix( &DisplaySample[0],&ScreenSample[0],&matrix ) ;
+    LCD_Clear(Black);
+}
+
 
 /*********************************************************************************************************
       END FILE

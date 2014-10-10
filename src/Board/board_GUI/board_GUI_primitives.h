@@ -36,7 +36,7 @@ typedef enum
 } GUI_COLOR ;
 
 #define BG_SYSTEM_SCREEN_COLOR  sys_Black
-#define BG_SYSTEM_TEXT_COLOR  sys_White
+#define BG_SYSTEM_TEXT_COLOR    sys_White
 typedef struct
 {
   /* Start position of text. */
