@@ -87,7 +87,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>6.40.5.54273</state>
+          <state>6.40.3.54103</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -301,6 +301,9 @@
           <state>$PROJ_DIR$\src\system\STM32F10x_StdPeriph_Driver\inc</state>
           <state>$PROJ_DIR$\src\system\CMSIS\CM3\DeviceSupport\ST\STM32F10x</state>
           <state>$PROJ_DIR$\src\board\board_GUI</state>
+          <state>$PROJ_DIR$\src\board\Embedded_GUI_HAL</state>
+          <state>$PROJ_DIR$\src\board\Embedded_GUI_Library</state>
+          <state>$PROJ_DIR$\src\board\GUI</state>
           <state>$PROJ_DIR$\src\TouchPanel</state>
           <state>$PROJ_DIR$\src\GLCD</state>
           <state>$PROJ_DIR$\src\board</state>
@@ -1872,6 +1875,99 @@
         </file>
       </group>
       <group>
+        <name>GuiApi</name>
+        <excluded>
+          <configuration>Debug</configuration>
+        </excluded>
+        <group>
+          <name>Embedded_GUI_HAL</name>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\JoyHal.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\JoyHal.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\LcdHal.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\LcdHal.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\ssd1289.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\ssd1289.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\stm32HAL.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\touchscreen.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\touchscreen.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\TscHal.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_HAL\TscHal.h</name>
+          </file>
+        </group>
+        <group>
+          <name>Embedded_GUI_Library</name>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\cursor.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\cursor.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\gl_fonts.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\gl_fonts.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\graphicObject.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\graphicObject.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\graphicObjectTypes.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\images.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\Embedded_GUI_Library\images.h</name>
+          </file>
+        </group>
+        <group>
+          <name>GUI</name>
+          <file>
+            <name>$PROJ_DIR$\src\board\GUI\pictures.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\GUI\pictures.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\GUI\uiappuser.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\GUI\uiappuser.h</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\GUI\uiframework.c</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\src\board\GUI\uiframework.h</name>
+          </file>
+        </group>
+      </group>
+      <group>
         <name>touch_panel</name>
         <file>
           <name>$PROJ_DIR$\src\TouchPanel\TouchPanel.c</name>
@@ -1943,6 +2039,12 @@
     </group>
     <group>
       <name>cpp</name>
+      <file>
+        <name>$PROJ_DIR$\src\cpp\ButtonEvents.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\cpp\ButtonEvents.h</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\src\cpp\classButton.cpp</name>
       </file>

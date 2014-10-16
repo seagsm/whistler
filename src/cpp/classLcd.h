@@ -1,17 +1,17 @@
 #ifndef CLASS_LCD_H
 #define CLASS_LCD_H 1
 
-extern "C" 
+extern "C"
 {
     #include "TouchPanel.h"
     #include "GLCD.h"
 }
 
 class Lcd
-{ 
-    public: 
+{
+    public:
         Lcd(uint8_t u8_Brightness, uint16_t u16_Color);
-        
+
         void mLCD_WriteRAM_Prepare(void);
         void mLCD_WriteRAM(uint16_t RGB_Code);
 
@@ -29,9 +29,9 @@ FunctionalState mLCD_BackLight( uint8_t percent);
         void mPutChar(unsigned short Xpos,unsigned short Ypos,unsigned char c,unsigned short charColor,unsigned short bkColor);
         void mPutCharRotate(unsigned short Xpos,unsigned short Ypos,unsigned char c,unsigned short charColor,unsigned short bkColor,uint8_t rotation);
         void mRotateCharBuffer(unsigned char* pBuffer);
-        
+
     protected:
-    
+
     private:
 };
 
