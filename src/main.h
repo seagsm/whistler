@@ -10,9 +10,6 @@ extern "C" {
 #include <misc.h>
 
 #include "board_system_type.h"
-#include "board_init.h"
-#include "board_state.h"
-#include "board_system_init.h"
 #include "board_sys_tick.h"
   
 #include "TouchPanel.h"
